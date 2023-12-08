@@ -1,0 +1,15 @@
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/bin/Debug/net7.0/ReturnTypes
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/bin/Debug/net7.0/ReturnTypes.deps.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/bin/Debug/net7.0/ReturnTypes.runtimeconfig.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/bin/Debug/net7.0/ReturnTypes.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/bin/Debug/net7.0/ReturnTypes.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.csproj.AssemblyReference.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.AssemblyInfoInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.AssemblyInfo.cs
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.csproj.CoreCompileInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/refint/ReturnTypes.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ReturnTypes.genruntimeconfig.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/obj/Debug/net7.0/ref/ReturnTypes.dll

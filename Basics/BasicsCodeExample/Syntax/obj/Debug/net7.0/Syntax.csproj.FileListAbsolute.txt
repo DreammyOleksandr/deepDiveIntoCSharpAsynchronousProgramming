@@ -1,0 +1,15 @@
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/bin/Debug/net7.0/Syntax
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/bin/Debug/net7.0/Syntax.deps.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/bin/Debug/net7.0/Syntax.runtimeconfig.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/bin/Debug/net7.0/Syntax.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/bin/Debug/net7.0/Syntax.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.csproj.AssemblyReference.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.AssemblyInfoInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.AssemblyInfo.cs
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.csproj.CoreCompileInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/refint/Syntax.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/Syntax.genruntimeconfig.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/Debug/net7.0/ref/Syntax.dll

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntax", "Syntax\Syntax.csproj", "{CD55025C-B703-4428-8E50-9871889E18BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReturnTypes", "ReturnTypes\ReturnTypes.csproj", "{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD55025C-B703-4428-8E50-9871889E18BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD55025C-B703-4428-8E50-9871889E18BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD55025C-B703-4428-8E50-9871889E18BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD55025C-B703-4428-8E50-9871889E18BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
