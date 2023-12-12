@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/Syntax.csproj": {}
+    "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/DefaultUseCases.csproj": {}
   },
   "projects": {
-    "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/Syntax.csproj": {
+    "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/DefaultUseCases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/Syntax.csproj",
-        "projectName": "Syntax",
-        "projectPath": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/Syntax.csproj",
+        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/DefaultUseCases.csproj",
+        "projectName": "DefaultUseCases",
+        "projectPath": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/DefaultUseCases.csproj",
         "packagesPath": "/Users/bondarenkooleksandr/.nuget/packages/",
-        "outputPath": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/Syntax/obj/",
+        "outputPath": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bondarenkooleksandr/.nuget/NuGet/NuGet.Config"

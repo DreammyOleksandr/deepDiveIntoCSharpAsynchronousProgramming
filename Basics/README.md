@@ -22,9 +22,9 @@ async Task HouseMaintenance(string housework, int estimatedTime)
 {
     await Task.Run(() =>
     {
-        for (int secondsAmount = 1; secondsAmount < estimatedTime; secondsAmount++)
+        for (int minutesAmount = 1; minutesAmount <= estimatedTime; minutesAmount++)
         {
-            Console.WriteLine($"Doing {housework} for {secondsAmount} seconds");
+            Console.WriteLine($"Doing {housework} for {minutesAmount} minutes");
         }
     });
 }

@@ -1,0 +1,15 @@
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/bin/Debug/net7.0/DefaultUseCases
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/bin/Debug/net7.0/DefaultUseCases.deps.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/bin/Debug/net7.0/DefaultUseCases.runtimeconfig.json
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/bin/Debug/net7.0/DefaultUseCases.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/bin/Debug/net7.0/DefaultUseCases.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.csproj.AssemblyReference.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.AssemblyInfoInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.AssemblyInfo.cs
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.csproj.CoreCompileInputs.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/refint/DefaultUseCases.dll
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.pdb
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/DefaultUseCases.genruntimeconfig.cache
+/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/DefaultUseCases/obj/Debug/net7.0/ref/DefaultUseCases.dll

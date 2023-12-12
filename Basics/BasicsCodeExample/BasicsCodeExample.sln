@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syntax", "Syntax\Syntax.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReturnTypes", "ReturnTypes\ReturnTypes.csproj", "{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultUseCases", "DefaultUseCases\DefaultUseCases.csproj", "{0BBEB952-E7D8-4FF7-92A0-01DB616F40F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7328EE82-3428-45A9-A5CA-3F1F4AEA3117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBEB952-E7D8-4FF7-92A0-01DB616F40F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBEB952-E7D8-4FF7-92A0-01DB616F40F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBEB952-E7D8-4FF7-92A0-01DB616F40F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBEB952-E7D8-4FF7-92A0-01DB616F40F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
