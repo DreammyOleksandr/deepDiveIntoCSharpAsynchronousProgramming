@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DAXuBbrU/V2gTArbuHs+Aqa0Qli031kMErHpsl1YXLGKnw252FO5nqBzcTxO8RabHCzGIuXm/+Qm2AkheWLCrA==",
+  "dgSpecHash": "ruzWF48/ybmyctqBWUZrBYErzwud3UVwfQePvf8TRW0854/ZHjZTz0+QpiKkwUABs6TS6lfzVg8ANbb8uNnqHQ==",
   "success": true,
-  "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/Deep dive into С# Asynchronius Programming/Basics/BasicsCodeExample/ReturnTypes/ReturnTypes.csproj",
+  "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/ReturnTypes/ReturnTypes.csproj",
   "expectedPackageFiles": [
     "/Users/bondarenkooleksandr/.nuget/packages/microsoft.netcore.app.ref/7.0.2/microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
     "/Users/bondarenkooleksandr/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512",
