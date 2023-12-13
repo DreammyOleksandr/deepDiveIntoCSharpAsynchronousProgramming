@@ -1,14 +1,8 @@
 ﻿FamilyMember Alex = new("Alex", "Son", "vacuum cleaning");
 FamilyMember Lila = new("Lila", "Mom", "flowers watering");
 
-Dictionary<string, int> TimeEstimated = new()
-{
-    ["vacuum cleaning"] = 40,
-    ["flowers watering"] = 5,
-};
-
-Lila.HouseMaintainingAsync(TimeEstimated[Lila.ChosenHouseWork.ToLower()]);
-Alex.HouseMaintaining(TimeEstimated[Alex.ChosenHouseWork.ToLower()]);
+Lila.HouseMaintaining();
+Alex.HouseMaintaining();
 
 class FamilyMember
 {
@@ -16,23 +10,31 @@ class FamilyMember
     {
         _name = name;
         _familyRole = familyRole;
-        ChosenHouseWork = chosenHouseWork;
+        _chosenHouseWork = chosenHouseWork;
     }
 
     private string _familyRole { get; set; }
     private string _name { get; set; }
-    public string ChosenHouseWork { get; set; }
+    private string _chosenHouseWork { get; set; }
     
-    public void HouseMaintaining(int estimatedTime)
+    public void HouseMaintaining()
     {
+        Dictionary<string, int> EstimatedTimeInMinutes = new()
+        {
+            ["vacuum cleaning"] = 40,
+            ["flowers watering"] = 5,
+        };
+
+        int estimatedTime = EstimatedTimeInMinutes[_chosenHouseWork];
+        
         for (int minutesAmount = 1; minutesAmount <= estimatedTime; minutesAmount++)
         {
             Thread.Sleep(50);
-            Console.WriteLine($"{_name} is {ChosenHouseWork} for {minutesAmount} minutes");
+            Console.WriteLine($"{_name} is {_chosenHouseWork} for {minutesAmount} minutes");
         }
-        Console.WriteLine($"{_name} has done {ChosenHouseWork}");
+        Console.WriteLine($"{_name} has done {_chosenHouseWork}");
     }
     
-    public async Task HouseMaintainingAsync(int estimatedTime) =>
-        await Task.Run(() => HouseMaintaining(estimatedTime));
+    public async Task HouseMaintainingAsync() =>
+        await Task.Run(() => HouseMaintaining());
 }

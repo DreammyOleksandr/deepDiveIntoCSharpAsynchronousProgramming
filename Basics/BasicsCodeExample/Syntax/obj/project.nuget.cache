@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FTSBnKktkPmQzsPin5WsyKBwjTXmU46fVtXfcHgy5AQJj7G+uiP1P1FktgAkswbhTZqIkmZ5gFg1k5in1CadLw==",
+  "dgSpecHash": "1GvYTqNenF3WNKkYi3LUC8DvSXXvrDCNfcU3dYnijJJw+NEUSWCWa1Kw8d0AM/8oCRF+8te+lfpvynHahqRiJg==",
   "success": true,
   "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/Syntax/Syntax.csproj",
-  "expectedPackageFiles": [
-    "/Users/bondarenkooleksandr/.nuget/packages/microsoft.netcore.app.ref/7.0.2/microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
-    "/Users/bondarenkooleksandr/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512",
-    "/Users/bondarenkooleksandr/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.2/microsoft.netcore.app.host.osx-arm64.7.0.2.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
