@@ -16,25 +16,28 @@ class FamilyMember
     private string _familyRole { get; set; }
     private string _name { get; set; }
     private string _chosenHouseWork { get; set; }
-    
+
     public void HouseMaintaining()
     {
-        Dictionary<string, int> EstimatedTimeInMinutes = new()
+        int estimatedTimeInMinutes = ((Func<int>)(() =>
         {
-            ["vacuum cleaning"] = 40,
-            ["flowers watering"] = 5,
-        };
+            Dictionary<string, int> TimeEstimation = new()
+            {
+                ["vacuum cleaning"] = 40,
+                ["flowers watering"] = 5,
+            };
+            return TimeEstimation[_chosenHouseWork];
+        }))();
 
-        int estimatedTime = EstimatedTimeInMinutes[_chosenHouseWork];
-        
-        for (int minutesAmount = 1; minutesAmount <= estimatedTime; minutesAmount++)
+        for (int minutesAmount = 1; minutesAmount <= estimatedTimeInMinutes; minutesAmount++)
         {
             Thread.Sleep(50);
             Console.WriteLine($"{_name} is {_chosenHouseWork} for {minutesAmount} minutes");
         }
+
         Console.WriteLine($"{_name} has done {_chosenHouseWork}");
     }
-    
+
     public async Task HouseMaintainingAsync() =>
         await Task.Run(() => HouseMaintaining());
 }
