@@ -1,8 +1,21 @@
 ﻿FamilyMember Alex = new("Alex", "Son", "vacuum cleaning");
 FamilyMember Lila = new("Lila", "Mom", "flowers watering");
 
-Lila.HouseMaintaining();
-Alex.HouseMaintaining();
+Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
+
+//Uncomment next lines if you want to see different behaviour
+
+// Lila.HouseMaintaining();
+// Alex.HouseMaintaining();
+
+// await Lila.HouseMaintainingAsync();
+// Alex.HouseMaintaining();
+
+// Lila.HouseMaintainingAsync();
+// Alex.HouseMaintainingAsync();
+
+await Lila.HouseMaintainingAsync();
+await Alex.HouseMaintainingAsync();
 
 class FamilyMember
 {
@@ -22,12 +35,14 @@ class FamilyMember
         int estimatedTimeInMinutes = ((Func<int>)(() =>
         {
             Dictionary<string, int> TimeEstimation = new()
-            {
+            {  
                 ["vacuum cleaning"] = 40,
                 ["flowers watering"] = 5,
             };
             return TimeEstimation[_chosenHouseWork];
         }))();
+
+        Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
 
         for (int minutesAmount = 1; minutesAmount <= estimatedTimeInMinutes; minutesAmount++)
         {
@@ -36,6 +51,8 @@ class FamilyMember
         }
 
         Console.WriteLine($"{_name} has done {_chosenHouseWork}");
+        Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
+
     }
 
     public async Task HouseMaintainingAsync() =>
