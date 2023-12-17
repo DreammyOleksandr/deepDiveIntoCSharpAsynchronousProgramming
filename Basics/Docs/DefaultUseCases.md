@@ -137,7 +137,7 @@ Alex has done vacuum cleaning
 Process finished with exit code 0.
 ```
 
-Here we can see that Alex and Lila were doing their work at the same time, or _[In Parallel]()_:
+Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`]() Method)
 
 <p>
     <img src="./ParallelDiagram.png">
@@ -162,3 +162,34 @@ Alex is vacuum cleaning for 1 minutes
 
 Process finished with exit code 0.
 ```
+
+So, what's happening here? We can remember that when we call async methods the secondary threads take responsibilities for execution of them and in our case happens something like this:
+
+<p>
+    <img src="./BothAsyncDiagram.png">
+</p>
+
+From here you can understand if the main thread ended work of application then other threads won't continue their work (**Important:** _It works like this in console applications, but in other frameworks like WPF, WinForms, ASP.NET and others the execution of asynchronous functions can differ._)
+
+Also we can have results like this:
+
+```console
+
+Process finished with exit code 0.
+```
+
+Or this:
+
+```console
+
+Lila is flowers watering for 2 minutes
+Alex is vacuum cleaning for 2 minutes
+Lila is flowers watering for 3 minutes
+Alex is vacuum cleaning for 3 minutes
+Lila is flowers watering for 4 minutes
+Alex is vacuum cleaning for 4 minutes
+
+Process finished with exit code 0.
+```
+
+Or any other variations that won't execute this application properly. It differs because of internal processes of app which can make main threat execute slower, or faster.
