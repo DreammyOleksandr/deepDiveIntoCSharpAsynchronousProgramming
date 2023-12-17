@@ -1,14 +1,21 @@
 ﻿FamilyMember Alex = new("Alex", "Son", "vacuum cleaning");
 FamilyMember Lila = new("Lila", "Mom", "flowers watering");
 
-Dictionary<string, int> TimeEstimated = new()
-{
-    ["vacuum cleaning"] = 40,
-    ["flowers watering"] = 5,
-};
+Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
 
-Lila.HouseMaintainingAsync(TimeEstimated[Lila.ChosenHouseWork.ToLower()]);
-Alex.HouseMaintaining(TimeEstimated[Alex.ChosenHouseWork.ToLower()]);
+//Uncomment next lines if you want to see different behaviour
+
+// Lila.HouseMaintaining();
+// Alex.HouseMaintaining();
+
+// await Lila.HouseMaintainingAsync();
+// Alex.HouseMaintaining();
+
+// Lila.HouseMaintainingAsync();
+// Alex.HouseMaintainingAsync();
+
+await Lila.HouseMaintainingAsync();
+await Alex.HouseMaintainingAsync();
 
 class FamilyMember
 {
@@ -16,23 +23,38 @@ class FamilyMember
     {
         _name = name;
         _familyRole = familyRole;
-        ChosenHouseWork = chosenHouseWork;
+        _chosenHouseWork = chosenHouseWork;
     }
 
     private string _familyRole { get; set; }
     private string _name { get; set; }
-    public string ChosenHouseWork { get; set; }
-    
-    public void HouseMaintaining(int estimatedTime)
+    private string _chosenHouseWork { get; set; }
+
+    public void HouseMaintaining()
     {
-        for (int minutesAmount = 1; minutesAmount <= estimatedTime; minutesAmount++)
+        int estimatedTimeInMinutes = ((Func<int>)(() =>
+        {
+            Dictionary<string, int> TimeEstimation = new()
+            {  
+                ["vacuum cleaning"] = 40,
+                ["flowers watering"] = 5,
+            };
+            return TimeEstimation[_chosenHouseWork];
+        }))();
+
+        Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
+
+        for (int minutesAmount = 1; minutesAmount <= estimatedTimeInMinutes; minutesAmount++)
         {
             Thread.Sleep(50);
-            Console.WriteLine($"{_name} is {ChosenHouseWork} for {minutesAmount} minutes");
+            Console.WriteLine($"{_name} is {_chosenHouseWork} for {minutesAmount} minutes");
         }
-        Console.WriteLine($"{_name} has done {ChosenHouseWork}");
+
+        Console.WriteLine($"{_name} has done {_chosenHouseWork}");
+        Console.WriteLine($"Current threadId: {Thread.CurrentThread.ManagedThreadId}");
+
     }
-    
-    public async Task HouseMaintainingAsync(int estimatedTime) =>
-        await Task.Run(() => HouseMaintaining(estimatedTime));
+
+    public async Task HouseMaintainingAsync() =>
+        await Task.Run(() => HouseMaintaining());
 }
