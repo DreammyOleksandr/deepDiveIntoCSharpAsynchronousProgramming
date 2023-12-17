@@ -96,7 +96,7 @@ I hope you've expected the same result :D. Just synchronous execution of a progr
 If we will refer to the real world scenario it will look like this: Lila started watering flowers and right after she finished Alex started vacuum cleaning:
 
 <p>
-    <img src="./SyncDiagram.png">
+    <img src="./Default Use Cases Images/SyncDiagram.png">
 </p>
 
 Now let's take a look at case when they want to start doing housework at the same time
@@ -140,7 +140,7 @@ Process finished with exit code 0.
 Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`]() Method)
 
 <p>
-    <img src="./ParallelDiagram.png">
+    <img src="./Default Use Cases Images/ParallelDiagram.png">
 </p>
 
 But let's take a look at the situation where Lila says "Hey, son I want to start doing my part of a work when you start yours" and Alex says: "Hey, son I want to start doing my part of a work when you start yours", so we will call 2 async methods.
@@ -166,7 +166,7 @@ Process finished with exit code 0.
 So, what's happening here? We can remember that when we call async methods the secondary threads take responsibilities for execution of them and in our case happens something like this:
 
 <p>
-    <img src="./BothAsyncDiagram.png">
+    <img src="./Default Use Cases Images/BothAsyncDiagram.png">
 </p>
 
 From here you can understand if the main thread ended work of application then other threads won't continue their work (**Important:** _It works like this in console applications, but in other frameworks like WPF, WinForms, ASP.NET and others the execution of asynchronous functions can differ._)
@@ -232,7 +232,7 @@ Process finished with exit code 0.
 In our case the main thread is like father who firstly said to his wife to water flowers and after she did her work he forwarded towards son and told him to do his work:
 
 <p>
-    <img src="./AwaitDiagram.png">
+    <img src="./Default Use Cases Images/AwaitDiagram.png">
 </p>
 
 (Notice that Ids given for secondary threads are not constant and can differ based on that which thread was called in thread pool by the application).
