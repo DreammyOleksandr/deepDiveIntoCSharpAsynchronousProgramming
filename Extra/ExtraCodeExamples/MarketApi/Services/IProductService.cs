@@ -4,12 +4,22 @@ namespace MarketApi.Services
 {
     public interface IProductService
     {
+        //Async suffix      
         Task<Product> CreateAsync(Product product);
-        Task<IEnumerable<Product>> GetAllAsync();
-        Task<Product> GetAsync(int id);
-        Task<Product> UpdateAsync(Product product);
-        Task<Product> DeleteAsync(int id);
-        Task<bool> IsExistAsync(int id);
 
+        //Async suffix
+        Task<IEnumerable<Product>> GetAllAsync();
+
+        //Async suffix
+        Task<Product> GetAsync(int id);
+
+        //Async suffix
+        Task<Product> UpdateAsync(Product product);
+
+        //Async suffix
+        Task<Product> DeleteAsync(int id);
+
+        //Async suffix
+        Task<bool> IsExistAsync(int id);
     }
 }

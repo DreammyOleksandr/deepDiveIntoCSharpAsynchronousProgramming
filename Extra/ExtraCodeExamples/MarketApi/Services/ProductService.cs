@@ -13,7 +13,8 @@ namespace MarketApi.Services
             _db = db;
         }
 
-        public async Task<Product> CreateAsync(Product product) 
+        //Async suffix
+        public async Task<Product> CreateAsync(Product product)
         {
             await _db.AddAsync(product);
             await _db.SaveChangesAsync();
@@ -21,16 +22,20 @@ namespace MarketApi.Services
             return product;
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync() 
+        //Async suffix 
+        public async Task<IEnumerable<Product>> GetAllAsync()
         {
             return await _db.Proucts.ToListAsync();
         }
+
+        //Async suffix
         public async Task<Product> GetAsync(int id)
         {
             return await _db.Proucts.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<Product> UpdateAsync(Product product) 
+        //Async suffix
+        public async Task<Product> UpdateAsync(Product product)
         {
             _db.Proucts.Update(product);
             await _db.SaveChangesAsync();
@@ -38,6 +43,7 @@ namespace MarketApi.Services
             return product;
         }
 
+        //Async suffix
         public async Task<Product> DeleteAsync(int id)
         {
             var product = await _db.Proucts.FirstOrDefaultAsync(p => p.Id == id);
@@ -48,6 +54,7 @@ namespace MarketApi.Services
             return product;
         }
 
+        //Async suffix
         public async Task<bool> IsExistAsync(int id)
         {
             return await _db.Proucts.AnyAsync(p => p.Id == id);

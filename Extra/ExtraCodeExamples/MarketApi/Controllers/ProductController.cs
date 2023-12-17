@@ -9,12 +9,14 @@ namespace MarketApi.Controllers
     public class ProductController : ControllerBase
     {
         IProductService _productService;
+
         public ProductController(IProductService productService)
         {
             _productService = productService;
         }
 
         [HttpPost]
+        //No Async suffix
         public async Task<IActionResult> Create(Product product)
         {
             if (await _productService.IsExistAsync(product.Id))
@@ -28,6 +30,7 @@ namespace MarketApi.Controllers
         }
 
         [HttpGet]
+        //No Async suffix
         public async Task<IActionResult> GetAll()
         {
             var products = await _productService.GetAllAsync();
@@ -36,6 +39,7 @@ namespace MarketApi.Controllers
         }
 
         [HttpGet]
+        //No Async suffix
         public async Task<IActionResult> Get(int id)
         {
             if (!await _productService.IsExistAsync(id))
@@ -49,6 +53,7 @@ namespace MarketApi.Controllers
         }
 
         [HttpPut]
+        //No Async suffix
         public async Task<IActionResult> Update(Product product)
         {
             if (!await _productService.IsExistAsync(product.Id))
@@ -62,6 +67,7 @@ namespace MarketApi.Controllers
         }
 
         [HttpDelete]
+        //No Async suffix
         public async Task<IActionResult> Delete(int id)
         {
             if (!await _productService.IsExistAsync(id))
