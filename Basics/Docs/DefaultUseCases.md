@@ -193,3 +193,48 @@ Process finished with exit code 0.
 ```
 
 Or any other variations that won't execute this application properly. It differs because of internal processes of app which can make main threat execute slower, or faster.
+
+## Scenario #4: Awaited Async Functions calling
+
+Now let's take a look at the right variant of using async functions and await them! (Let's also take a look at the threads managing specific methods by outputting them into console.)
+
+```csharp
+await Lila.HouseMaintainingAsync();
+await Alex.HouseMaintainingAsync();
+```
+
+Result:
+
+```console
+Current threadId: 1
+Current threadId: 4
+Lila is flowers watering for 1 minutes
+Lila is flowers watering for 2 minutes
+Lila is flowers watering for 3 minutes
+Lila is flowers watering for 4 minutes
+Lila is flowers watering for 5 minutes
+Lila has done flowers watering
+Current threadId: 4
+Current threadId: 9
+Alex is vacuum cleaning for 1 minutes
+Alex is vacuum cleaning for 2 minutes
+Alex is vacuum cleaning for 3 minutes
+...
+Alex is vacuum cleaning for 38 minutes
+Alex is vacuum cleaning for 39 minutes
+Alex is vacuum cleaning for 40 minutes
+Alex has done vacuum cleaning
+Current threadId: 9
+
+Process finished with exit code 0.
+```
+
+In our case the main thread is like father who firstly said to his wife to water flowers and after she did her work he forwarded towards son and told him to do his work:
+
+<p>
+    <img src="./AwaitDiagram.png">
+</p>
+
+(Notice that Ids given for secondary threads are not constant and can differ based on that which thread was called in thread pool by the application).
+
+Now we have built more scalable application by calling `async` functions with `await` operator. But if you're attentive reader you could notice that awaited methods executed in the same way as regular synchronous methods and then you can ask: was there any difference in the speed of execution of this app? And I will answer to you: No! In this case we just took care of managing our threads. If you wish to know how to make applications with asynchronous functions execute much faster read our [Task.WhenAll() guide]().
