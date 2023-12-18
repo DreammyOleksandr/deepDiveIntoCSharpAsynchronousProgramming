@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/r0bPnorVvUPKhAJ9IZkNNJhyjhKX3HzYZ0/PCh9OTWiZOlOTX1vz7dgtT/O2W33VcAisT6mxhUeMjfjyCzeOw==",
+  "dgSpecHash": "4QSavrY4cCyExw77j5YXjG9irphj10ws3n8uf7b1I8fagQkfs6A9/ms2MevMbdgtZ78pzd3wPIjjdyZiM5Uawg==",
   "success": true,
   "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/bondarenkooleksandr/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
