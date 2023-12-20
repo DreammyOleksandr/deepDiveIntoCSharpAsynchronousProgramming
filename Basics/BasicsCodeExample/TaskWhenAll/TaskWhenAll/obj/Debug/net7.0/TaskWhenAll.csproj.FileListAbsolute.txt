@@ -1,0 +1,17 @@
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/TaskWhenAll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/TaskWhenAll.deps.json
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/TaskWhenAll.runtimeconfig.json
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/TaskWhenAll.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/TaskWhenAll.pdb
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.csproj.AssemblyReference.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.AssemblyInfoInputs.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.AssemblyInfo.cs
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.csproj.CoreCompileInputs.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.csproj.CopyComplete
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/refint/TaskWhenAll.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.pdb
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/TaskWhenAll.genruntimeconfig.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/Debug/net7.0/ref/TaskWhenAll.dll

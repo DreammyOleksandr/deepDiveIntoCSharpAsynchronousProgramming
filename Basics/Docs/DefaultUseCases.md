@@ -137,7 +137,7 @@ Alex has done vacuum cleaning
 Process finished with exit code 0.
 ```
 
-Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`]() Method)
+Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`](./TaskWhenAll.md), or [`Parallel.ForEach`]() Methods)
 
 <p>
     <img src="./Default Use Cases Images/ParallelDiagram.png">
@@ -237,4 +237,4 @@ In our case the main thread is like father who firstly said to his wife to water
 
 (Notice that Ids given for secondary threads are not constant and can differ based on that which thread was called in thread pool by the application).
 
-Now we have built more scalable application by calling `async` functions with `await` operator. But if you're attentive reader you could notice that awaited methods executed in the same way as regular synchronous methods and then you can ask: was there any difference in the speed of execution of this app? And I will answer to you: No! In this case we just took care of managing our threads. If you wish to know how to make applications with asynchronous functions execute much faster read our [Task.WhenAll() guide]().
+Now we have built more scalable application by calling `async` functions with `await` operator. But if you're attentive reader you could notice that awaited methods executed in the same way as regular synchronous methods and then you can ask: was there any difference in the speed of execution of this app? And I will answer to you: No! In this case we just took care of managing our threads. If you wish to know how to make applications with asynchronous functions execute much faster read our [Task.WhenAll() guide](./TaskWhenAll.md).
