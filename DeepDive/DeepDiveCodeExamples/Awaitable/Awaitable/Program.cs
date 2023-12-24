@@ -5,6 +5,9 @@ string jsonPathLocal = @"/Users/bondarenkooleksandr/LocalDatabase.json";
 
 Service<Customer> service = new();
 
+Console.WriteLine($"Start of calling code in Thread {Thread.CurrentThread.ManagedThreadId}");
+// service.DisplayAsync(jsonPathLocal);
+
 //Instance #1
 await service.DisplayAsync(jsonPathLocal);
 
@@ -12,7 +15,7 @@ await service.DisplayAsync(jsonPathLocal);
 // service.DisplayAsync(jsonPathLocal).Wait();
 
 //Instance #3
-service.DisplayAsync(jsonPathLocal).GetAwaiter().GetResult();
+// service.DisplayAsync(jsonPathLocal).GetAwaiter().GetResult();
 
 // Instance #4
 // var result = service.GetParseLocalJSON(jsonPathLocal).Result;
@@ -23,3 +26,5 @@ service.DisplayAsync(jsonPathLocal).GetAwaiter().GetResult();
 // await service.DisplayAsync(jsonPathLocal);
 
 service.Display(jsonPathLocal);
+
+Console.WriteLine($"End of calling code in Thread {Thread.CurrentThread.ManagedThreadId}");

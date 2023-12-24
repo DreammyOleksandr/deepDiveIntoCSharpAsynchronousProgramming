@@ -23,9 +23,16 @@ public class Service<T> : IService<T> where T : class
 
     public void Display(string path)
     {
+        Console.WriteLine($"Start of Sync Method in Thread {Thread.CurrentThread.ManagedThreadId}");
         List<T> records = GetParseLocalJSON(path).Result;
         foreach (var record in records) Console.WriteLine(record.ToString());
+        Console.WriteLine($"End of Sync Method in Thread {Thread.CurrentThread.ManagedThreadId}");
     }
-    
-    public async Task DisplayAsync(string path) => await Task.Run(() => Display(path));
+
+    public async Task DisplayAsync(string path)
+    {
+        Console.WriteLine($"Start of Async Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+        await Task.Run(() => Display(path));
+        Console.WriteLine($"End of Async Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+    }
 }
