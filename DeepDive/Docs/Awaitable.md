@@ -159,3 +159,104 @@ Process finished with exit code 0.
 Now you know all of the standard awaiting methods in C#. Let's move on and find out about internal await execution.
 
 ## Awaitable Execution
+
+For better understanding of how does await work lets Display our Thread Ids:
+
+Calling code:
+
+```csharp
+using Awaitable;
+using Awaitable.Services;
+
+string jsonPathLocal = @"/Users/bondarenkooleksandr/LocalDatabase.json";
+
+Service<Customer> service = new();
+
+Console.WriteLine($"Start of app in Thread {Thread.CurrentThread.ManagedThreadId}");
+
+service.DisplayAsync(jsonPathLocal);
+service.Display(jsonPathLocal);
+
+Console.WriteLine($"Start of app in Thread {Thread.CurrentThread.ManagedThreadId}");
+```
+
+Service.cs:
+
+```csharp
+using Newtonsoft.Json;
+
+namespace Awaitable.Services;
+
+public class Service<T> : IService<T> where T : class
+{
+    public async Task<List<T>> GetParseLocalJSON(string path)
+    {
+        string jsonContent = await File.ReadAllTextAsync(path);
+        List<T> records = JsonConvert.DeserializeObject<List<T>>(jsonContent);
+
+        return records;
+    }
+
+    public async Task<List<T>> GetParseRemoteJSON(string url)
+    {
+        using HttpClient client = new HttpClient();
+        string jsonContent = await client.GetStringAsync(url);
+        List<T> records = JsonConvert.DeserializeObject<List<T>>(jsonContent);
+
+        return records;
+    }
+
+    public void Display(string path)
+    {
+        Console.WriteLine($"Start of Sync Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+        List<T> records = GetParseLocalJSON(path).Result;
+        foreach (var record in records) Console.WriteLine(record.ToString());
+        Console.WriteLine($"End of Sync Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+    }
+
+    public async Task DisplayAsync(string path)
+    {
+        Console.WriteLine($"Start of Async Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+        await Task.Run(() => Display(path));
+        Console.WriteLine($"End of Async Method in Thread {Thread.CurrentThread.ManagedThreadId}");
+    }
+}
+```
+
+Let's take a look at the execution of this code:
+_Notice, that results may vary, due to the internal execution of an app._
+
+```console
+Start of calling code in Thread 1 // - Start of the app.
+Start of Async Method in Thread 1 // - Start of the Async method.
+Start of Sync Method in Thread 1 // - Start of the Sync method.
+Start of Sync Method in Thread 7 // - Start of the Sync method, which is called in Async method.
+Id: 1; First name: Piper, Last Name: Durdy, Email: pdurdy0@nytimes.com
+Id: 2; First name: Elva, Last Name: Stearns, Email: estearns1@japanpost.jp
+Id: 1; First name: Piper, Last Name: Durdy, Email: pdurdy0@nytimes.com
+...
+Id: 999; First name: Kearney, Last Name: Sprowle, Email: ksprowlerq@who.int
+Id: 1000; First name: Ty, Last Name: Mellonby, Email: tmellonbyrr@craigslist.org
+End of Sync Method in Thread 1 // - End of the Sync method.
+End of Sync Method in Thread 7 // - End of the Sync method, which is called by Async method.
+End of calling code in Thread 1 // - End of the app
+End of Async Method in Thread 7 // - End of the Async method.
+
+Process finished with exit code 0.
+```
+
+To be more precise and explain what happened we made a UML graph:
+
+<p>
+    <img src="./Awaitable Images/Awaitable Graph.png" alt="Awaitable Graph">
+</p>
+
+And here is what happens inside of await operator:
+
+<p>
+    <img src="./Awaitable Images/Await Execution Graph.png" alt="Inside of await">
+</p>
+
+Here we can see that if our result has not been returned than we pass controls back to the calling thread, which will wait until we get our results back. Only after that the execution of the method will resume.
+
+**Thanks for reading this section! I hope you find out something new about await operator in C# :D.**
