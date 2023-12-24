@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/DefaultUseCases/DefaultUseCases.csproj": {}
+    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/Awaitable.csproj": {}
   },
   "projects": {
-    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/DefaultUseCases/DefaultUseCases.csproj": {
+    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/Awaitable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/DefaultUseCases/DefaultUseCases.csproj",
-        "projectName": "DefaultUseCases",
-        "projectPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/DefaultUseCases/DefaultUseCases.csproj",
+        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/Awaitable.csproj",
+        "projectName": "Awaitable",
+        "projectPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/Awaitable.csproj",
         "packagesPath": "/Users/bondarenkooleksandr/.nuget/packages/",
-        "outputPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/DefaultUseCases/obj/",
+        "outputPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bondarenkooleksandr/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,0 +1,17 @@
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Awaitable
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Awaitable.deps.json
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Awaitable.runtimeconfig.json
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Awaitable.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Awaitable.pdb
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.csproj.AssemblyReference.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.AssemblyInfoInputs.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.AssemblyInfo.cs
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.csproj.CoreCompileInputs.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.csproj.CopyComplete
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/refint/Awaitable.dll
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.pdb
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/Awaitable.genruntimeconfig.cache
+/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/obj/Debug/net7.0/ref/Awaitable.dll

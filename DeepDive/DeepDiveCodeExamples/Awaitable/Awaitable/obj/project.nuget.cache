@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "g13xGR8Zk0+Yg/2VtBKYdA4sHengTpS9CWj/3AEvT60yC3S3FMTRGJWmJ0Lp6vp6Kiayo7buf3l0FaE8I8kJvg==",
+  "success": true,
+  "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/Awaitable/Awaitable/Awaitable.csproj",
+  "expectedPackageFiles": [
+    "/Users/bondarenkooleksandr/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
