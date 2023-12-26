@@ -33,7 +33,7 @@ public class IOBoundTaskBenchmarks
     public int OperationDurationMs;
 
     [Benchmark]
-    public async Task WenAll()
+    public async Task WhenAll()
     {
         // creating an array of tasks
         var tasks = Enumerable.Range(0, OperationCount).Select(async i =>
@@ -73,7 +73,7 @@ As we can see in both cases, we are performing the same operation the same numbe
 benchmark and determine which approach executed faster.
 
 <p>
-    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for IO tasks.png" alt="WenAll Graph">
+    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for IO tasks.png" alt="WhenAll Graph">
 </p>
 
 Here, we will focus our attention on the number of operations (`OperationCount`) and the average duration (`Mean`). From the obtained table,
@@ -114,10 +114,10 @@ Parallel.ForEach(Enumerable.Range(1, 100), options, i =>
 });
 ```
 
-## WenAll()
+## WhenAll()
 
 <p>
-    <img src="./Parallel ForEach VS Task WhenAll Images/WhenAllGraph.png" alt="WenAll Graph">
+    <img src="./Parallel ForEach VS Task WhenAll Images/WhenAllGraph.png" alt="WhenAll Graph">
 </p>
 
 Here, the same process occurs as described in the separate section about [Task.WhenAll](./TaskWhenAll.md).
@@ -150,7 +150,7 @@ public class CPUBoundTaskBenchmarks
     public int CalculationCount;
 
     [Benchmark]
-    public async Task WenAll()
+    public async Task WhenAll()
     {
         // creating an array of tasks
         var tasks = Enumerable.Range(0, OperationCount).Select(_ =>
@@ -193,7 +193,7 @@ in terms of the tasks they need to perform.
 Well, let's run our benchmark again to see what the results will be this time.
 
 <p>
-    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for CPU tasks.png" alt="WenAll Graph">
+    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for CPU tasks.png" alt="WhenAll Graph">
 </p>
 
 Now, this table shows us quite different and interesting results. In terms of the number of tasks and mathematical computations, we can
