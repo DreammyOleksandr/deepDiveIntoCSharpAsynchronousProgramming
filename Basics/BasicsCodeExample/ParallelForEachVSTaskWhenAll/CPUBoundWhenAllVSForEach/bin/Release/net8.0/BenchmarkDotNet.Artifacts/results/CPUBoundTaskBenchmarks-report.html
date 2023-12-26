@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>CPUBoundTaskBenchmarks-20231225-211748</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.11, Windows 11 (10.0.22621.2861/22H2/2022Update/SunValley2)
+AMD Ryzen 7 5700X, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.100
+  [Host]     : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2 [AttachedDebugger]
+  DefaultJob : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method   </th><th>OperationCount</th><th>CalculationCount</th><th>Mean  </th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>WenAll</td><td>1</td><td>1000</td><td>1.030 &mu;s</td><td>0.0094 &mu;s</td><td>0.0087 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>1</td><td>1000</td><td>4.055 &mu;s</td><td>0.0191 &mu;s</td><td>0.0169 &mu;s</td>
+</tr><tr><td>WenAll</td><td>1</td><td>10000</td><td>3.008 &mu;s</td><td>0.0264 &mu;s</td><td>0.0247 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>1</td><td>10000</td><td>5.374 &mu;s</td><td>0.0367 &mu;s</td><td>0.0325 &mu;s</td>
+</tr><tr><td>WenAll</td><td>1</td><td>50000</td><td>11.684 &mu;s</td><td>0.0304 &mu;s</td><td>0.0254 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>1</td><td>50000</td><td>18.763 &mu;s</td><td>0.0968 &mu;s</td><td>0.0905 &mu;s</td>
+</tr><tr><td>WenAll</td><td>1</td><td>100000</td><td>22.566 &mu;s</td><td>0.0677 &mu;s</td><td>0.0633 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>1</td><td>100000</td><td>29.589 &mu;s</td><td>0.0987 &mu;s</td><td>0.0923 &mu;s</td>
+</tr><tr><td>WenAll</td><td>10</td><td>1000</td><td>3.115 &mu;s</td><td>0.0096 &mu;s</td><td>0.0080 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>10</td><td>1000</td><td>26.180 &mu;s</td><td>0.0956 &mu;s</td><td>0.0894 &mu;s</td>
+</tr><tr><td>WenAll</td><td>10</td><td>10000</td><td>22.786 &mu;s</td><td>0.0662 &mu;s</td><td>0.0553 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>10</td><td>10000</td><td>17.607 &mu;s</td><td>0.2175 &mu;s</td><td>0.1928 &mu;s</td>
+</tr><tr><td>WenAll</td><td>10</td><td>50000</td><td>110.190 &mu;s</td><td>0.3130 &mu;s</td><td>0.2928 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>10</td><td>50000</td><td>37.526 &mu;s</td><td>0.1232 &mu;s</td><td>0.1092 &mu;s</td>
+</tr><tr><td>WenAll</td><td>10</td><td>100000</td><td>218.941 &mu;s</td><td>0.5841 &mu;s</td><td>0.4878 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>10</td><td>100000</td><td>120.658 &mu;s</td><td>0.4538 &mu;s</td><td>0.4023 &mu;s</td>
+</tr><tr><td>WenAll</td><td>50</td><td>1000</td><td>12.360 &mu;s</td><td>0.0222 &mu;s</td><td>0.0197 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>50</td><td>1000</td><td>111.063 &mu;s</td><td>0.3606 &mu;s</td><td>0.3196 &mu;s</td>
+</tr><tr><td>WenAll</td><td>50</td><td>10000</td><td>110.580 &mu;s</td><td>0.3514 &mu;s</td><td>0.3115 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>50</td><td>10000</td><td>92.653 &mu;s</td><td>0.2983 &mu;s</td><td>0.2790 &mu;s</td>
+</tr><tr><td>WenAll</td><td>50</td><td>50000</td><td>548.219 &mu;s</td><td>1.5779 &mu;s</td><td>1.4760 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>50</td><td>50000</td><td>119.245 &mu;s</td><td>0.3806 &mu;s</td><td>0.3560 &mu;s</td>
+</tr><tr><td>WenAll</td><td>50</td><td>100000</td><td>1,094.660 &mu;s</td><td>2.9025 &mu;s</td><td>2.7150 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>50</td><td>100000</td><td>184.918 &mu;s</td><td>0.5277 &mu;s</td><td>0.4678 &mu;s</td>
+</tr><tr><td>WenAll</td><td>100</td><td>1000</td><td>23.924 &mu;s</td><td>0.0576 &mu;s</td><td>0.0539 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>100</td><td>1000</td><td>212.827 &mu;s</td><td>0.7275 &mu;s</td><td>0.6805 &mu;s</td>
+</tr><tr><td>WenAll</td><td>100</td><td>10000</td><td>220.445 &mu;s</td><td>0.2370 &mu;s</td><td>0.2101 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>100</td><td>10000</td><td>189.085 &mu;s</td><td>0.6660 &mu;s</td><td>0.5561 &mu;s</td>
+</tr><tr><td>WenAll</td><td>100</td><td>50000</td><td>1,092.386 &mu;s</td><td>1.3827 &mu;s</td><td>1.2257 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>100</td><td>50000</td><td>216.114 &mu;s</td><td>0.8167 &mu;s</td><td>0.7639 &mu;s</td>
+</tr><tr><td>WenAll</td><td>100</td><td>100000</td><td>2,183.321 &mu;s</td><td>6.1925 &mu;s</td><td>5.1710 &mu;s</td>
+</tr><tr><td>ParallelForEach</td><td>100</td><td>100000</td><td>326.563 &mu;s</td><td>1.0070 &mu;s</td><td>0.8927 &mu;s</td>
+</tr></tbody></table>
+</body>
+</html>
