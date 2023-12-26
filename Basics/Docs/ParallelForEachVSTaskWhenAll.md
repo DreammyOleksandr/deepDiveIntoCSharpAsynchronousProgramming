@@ -1,4 +1,4 @@
-# Parallel.ForEach() VS Task.WhenAll() | Code
+# Parallel.ForEach() VS Task.WhenAll() | [Code](../BasicsCodeExample/ParallelForEachVSTaskWhenAll/)
 
 The purpose of this section is to determine how effective the use of **Task.WhenAll** and **Parallel.ForEachAsync** operations is in various situations
 under different conditions. Here, we will address questions such as:
@@ -13,7 +13,7 @@ For our grand testing, we'll need to install a specific package, `BenchmarkDotNe
 
 Well, let's start our crazy comparison.
 
-## Parallel.ForEach() VS Task.WhenAll() in I/O bound tasks | Code
+## Parallel.ForEach() VS Task.WhenAll() in I/O bound tasks | [Code](../BasicsCodeExample/ParallelForEachVSTaskWhenAll/IOBoundWhenAllVSForEach/Program.cs)
 
 To simulate `input/output` tasks, we will use the method Task.Delay(). It will simulate a delay that might occur during reading from or writing to
 external sources like files, databases, network resources, and so on.
@@ -72,6 +72,10 @@ performs an operation on it, simulating an I/O-bound task.
 As we can see in both cases, we are performing the same operation the same number of times. However, let's examine the results of our
 benchmark and determine which approach executed faster.
 
+<p>
+    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for IO tasks.png" alt="WenAll Graph">
+</p>
+
 Here, we will focus our attention on the number of operations (`OperationCount`) and the average duration (`Mean`). From the obtained table,
 we can see that until the number of operations reaches 100, the average duration of both methods is approximately the same and almost equals
 the duration of a single operation. However, once the number of operations becomes 50 and above, we immediately notice a decrease in the
@@ -83,6 +87,10 @@ of processing all tasks simultaneously.
 Let's consider a schematic representation of how these methods work:
 
 ## ParallelForEach()
+
+<p>
+    <img src="./Parallel ForEach VS Task WhenAll Images/ForEachGraph.png" alt="ParallelForEach Graph">
+</p>
 
 Since the duration of execution for all tasks is the same, the schematic representation will look like this: only 16 tasks are executed
 simultaneously, and then another 16, and so on until all tasks are completed. It's worth noting that if the duration of each task were different,
@@ -108,7 +116,11 @@ Parallel.ForEach(Enumerable.Range(1, 100), options, i =>
 
 ## WenAll()
 
-Here, the same process occurs as described in the separate section about Task.WhenAll.
+<p>
+    <img src="./Parallel ForEach VS Task WhenAll Images/WhenAllGraph.png" alt="WenAll Graph">
+</p>
+
+Here, the same process occurs as described in the separate section about [Task.WhenAll](./TaskWhenAll.md).
 
 Let's summarize briefly. So, we've noticed that tasks related to reading from or writing to external sources are executed approximately the same
 when their quantity is small. However, when we have tens, hundreds, or thousands of such tasks that involve waiting for some delay,
@@ -116,7 +128,7 @@ when their quantity is small. However, when we have tens, hundreds, or thousands
 **Task.WhenAll** does not create new threads and does not wait for their launch. All it does is wait for the completion of all tasks. Therefore, we
 recommend giving priority to the **Task.WhenAll** method, especially when dealing with I/O-bound tasks.
 
-## Parallel.ForEach() VS Task.WhenAll() in CPU bound tasks | Code
+## Parallel.ForEach() VS Task.WhenAll() in CPU bound tasks | [Code](../BasicsCodeExample/ParallelForEachVSTaskWhenAll/CPUBoundWhenAllVSForEach/Program.cs)
 
 For simulating `CPU-bound` tasks, we will, for example, perform simple mathematical operations. In our case, it will be squaring the current
 iteration. In real-world scenarios, these could be any other operations related to mathematical calculations, sorting algorithms, matrix
@@ -179,6 +191,10 @@ perform a mathematical operation `Math.Pow(i, 2)` a large number of times. Again
 in terms of the tasks they need to perform.
 
 Well, let's run our benchmark again to see what the results will be this time.
+
+<p>
+    <img src="./Parallel ForEach VS Task WhenAll Images/Benchmark for CPU tasks.png" alt="WenAll Graph">
+</p>
 
 Now, this table shows us quite different and interesting results. In terms of the number of tasks and mathematical computations, we can
 observe that Task.WhenAll is faster with a relatively small number of calculations. However, as the number of operations and mathematical
