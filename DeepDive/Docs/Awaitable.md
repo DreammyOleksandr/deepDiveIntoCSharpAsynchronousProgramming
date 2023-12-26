@@ -177,7 +177,7 @@ Console.WriteLine($"Start of app in Thread {Thread.CurrentThread.ManagedThreadId
 service.DisplayAsync(jsonPathLocal);
 service.Display(jsonPathLocal);
 
-Console.WriteLine($"Start of app in Thread {Thread.CurrentThread.ManagedThreadId}");
+Console.WriteLine($"End of app in Thread {Thread.CurrentThread.ManagedThreadId}");
 ```
 
 Service.cs:
