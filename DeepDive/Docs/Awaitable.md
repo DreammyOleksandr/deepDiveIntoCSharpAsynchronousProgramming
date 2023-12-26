@@ -1,4 +1,4 @@
-# Awaitable | [Code]()
+# Awaitable | [Code](../DeepDiveCodeExamples/Awaitable/)
 
 ## Awaitable Methods
 
