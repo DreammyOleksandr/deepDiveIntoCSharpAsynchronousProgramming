@@ -1,9 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using AsyncStateMachine.Services;
 
 string jsonPathLocal = @"/Users/bondarenkooleksandr/LocalDatabase.json";
+IService service = new Service(jsonPathLocal);
 
-Console.WriteLine(await GetParseLocalJSONAsync(jsonPathLocal));
-Console.WriteLine(GetParseLocalJSON(jsonPathLocal));
-
-object GetParseLocalJSON(string _jsonPath) => JsonConvert.DeserializeObject(File.ReadAllText(_jsonPath));
-async Task<object> GetParseLocalJSONAsync(string _jsonPath) => JsonConvert.DeserializeObject(await File.ReadAllTextAsync(_jsonPath));
+Console.WriteLine($"{await service.GetParseLocalJSONAsync()}\n{service.GetParseLocalJSON()}");
