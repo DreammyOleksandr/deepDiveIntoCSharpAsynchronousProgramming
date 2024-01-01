@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1WmTn9UzrUIfa07wt2Wani2gv8Vx90iH6F6D+m9rCRXdDkEiKl2FtK3P34iTq/s2BVsebqEx+UtzKMK+iT9rdg==",
+  "dgSpecHash": "/3mQWRmC8fEweoD4ZLoyqUCr7BYu+gJfKsrgND/ASXuepwqxu4nrIS02FDMxwALxSYeI7RNaY47l+DGFH4eUYw==",
   "success": true,
   "projectFilePath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/DeepDive/DeepDiveCodeExamples/AsyncStateMachine/ServiceDecompiled/ServiceDecompiled.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/bondarenkooleksandr/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
