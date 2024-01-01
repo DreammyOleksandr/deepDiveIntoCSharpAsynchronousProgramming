@@ -136,4 +136,54 @@ Here we define our JSON local path then instantiate our `Service` with this path
 
 Yep, our functions have outputted in the same way. App works perfectly.
 
-## Decompiled Code
+## Decompiled Code | [Code](../DeepDiveCodeExamples/AsyncStateMachine/ServiceDecompiled/)
+
+Firstly, for better further understanding we have to show you the _IAsyncStateMachine_ interface and its methods:
+
+```C#
+namespace System.Runtime.CompilerServices
+{
+    public interface IAsyncStateMachine
+    {
+        void MoveNext();
+        void SetStateMachine(IAsyncStateMachine stateMachine);
+    }
+}
+```
+
+Here we have:
+
+- `MoveNext()` method which executes the body of asynchronous methods.
+- `SetStateMachine(IAsyncStateMachine stateMachine)` method (used by compiler if your assembly is on Release mode) is used for work with `Struct`s to put Finite-State Machine on Heap.
+
+We decompiled our code using [IL-Viewer](https://www.jetbrains.com/help/rider/Viewing_Intermediate_Language.html) integrated to JetBrains [Rider](https://www.jetbrains.com/rider/) IDE.
+
+Now we can find out what exactly hidden behind `async/await` keywords by decompiling our code to _Low-level C#_.
+
+For this instance the [Service](../DeepDiveCodeExamples/AsyncStateMachine/AsyncStateMachine/Services/Service.cs) class is decompiled. Let's take a look at this code step by step to keep you in touch:
+
+```C#
+  [NullableContext(1)]
+  [Nullable(0)]
+  public class Service :
+  IService
+  {
+    private readonly string _jsonPath;
+
+    public Service(string jsonPath)
+    {
+      base..ctor();
+      this._jsonPath = jsonPath;
+    }
+```
+
+The beginning of `Service` class declaration is pretty straight forward. We can see that this class is not nullable, implements the `IService` interface and has the same `_jsonPath` field as in main code example. Keep moving forward and take a look at `GetParseLocalJSON()` method declaration:
+
+```C#
+    public object GetParseLocalJSON()
+    {
+      return JsonConvert.DeserializeObject(File.ReadAllText(this._jsonPath));
+    }
+```
+
+Basically this method stayed absolutely the same, but was decompiled as a regular method instead of
