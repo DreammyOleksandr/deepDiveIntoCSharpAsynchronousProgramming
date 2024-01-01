@@ -138,6 +138,8 @@ Yep, our functions have outputted in the same way. App works perfectly.
 
 ## Decompiled Code | [Code](../DeepDiveCodeExamples/AsyncStateMachine/ServiceDecompiled/)
 
+_Notice that if you use the IL-Viewer to decompile your code then you will see strange naming of props or functions like `<>d__3`, `t__1` or something like this, also you will see some unusual constructions, which are not common for typical C# coding. It happens because decompiler does not write code for human and it does not understand naming conventions. Also, such naming in code is not allowed in High-level C#, so when you first see the decompiled code you can be a little confused, but we rewrote these parts of this decompiled code to help you understand what happens._
+
 Firstly, for better further understanding we have to show you the _IAsyncStateMachine_ interface and its methods:
 
 ```C#
@@ -163,8 +165,6 @@ Now we can find out what exactly hidden behind `async/await` keywords by decompi
 For this instance the [Service](../DeepDiveCodeExamples/AsyncStateMachine/AsyncStateMachine/Services/Service.cs) class is decompiled. Let's take a look at this code step by step to keep you in touch:
 
 ```C#
-  [NullableContext(1)]
-  [Nullable(0)]
   public class Service :
   IService
   {
@@ -172,12 +172,11 @@ For this instance the [Service](../DeepDiveCodeExamples/AsyncStateMachine/AsyncS
 
     public Service(string jsonPath)
     {
-      base..ctor();
       this._jsonPath = jsonPath;
     }
 ```
 
-The beginning of `Service` class declaration is pretty straight forward. We can see that this class is not nullable, implements the `IService` interface and has the same `_jsonPath` field as in main code example. Keep moving forward and take a look at `GetParseLocalJSON()` method declaration:
+The beginning of `Service` class declaration is pretty straight forward. We can see that this class implements the `IService` interface and has the same `_jsonPath` field as in main code example. Keep moving forward and take a look at `GetParseLocalJSON()` method declaration:
 
 ```C#
     public object GetParseLocalJSON()
@@ -186,4 +185,38 @@ The beginning of `Service` class declaration is pretty straight forward. We can 
     }
 ```
 
-Basically this method stayed absolutely the same, but was decompiled as a regular method instead of
+Basically this method stayed absolutely the same, but was decompiled as a regular method instead of lambda expression. Now let's take a look at the asynchronous variation of our method:
+
+```C#
+    [AsyncStateMachine(typeof (GetParseJSONAsyncStruct))]
+    [DebuggerStepThrough]
+    public Task<object> GetParseLocalJSONAsync()
+    {
+      GetParseJSONAsyncStruct stateMachine = new();
+      stateMachine.builder = AsyncTaskMethodBuilder<object>.Create();
+      stateMachine.state = -1;
+      stateMachine.service = this;
+      stateMachine.builder.Start(ref stateMachine);
+      return stateMachine.builder.Task;
+    }
+```
+
+We can see that we do not have the `async` modifier. Instead, our method now has the `[AsyncStateMachine]` attribute where we pass the `GetParseJSONAsyncStruct` that will execute all asynchronous logic. In body method we create the _State Machine_ of `GetParseJSONAsyncStruct` type and then we fill its fields { builder, state(created), builder(Of asynchronous methods)} and at the end we call `Start()` method of builder which accepts the stateMachine that we created. This method is responsible for calling `MoveNext()` method that executes our asynchronous code.
+
+Move on and let's take a look at the `GetParseJSONAsyncStruct` fields that we were filling previously:
+
+```C#
+    [CompilerGenerated]
+    [StructLayout(LayoutKind.Sequential)]
+    private struct GetParseJSONAsyncStruct :
+
+      IAsyncStateMachine
+    {
+      public int state;
+      public AsyncTaskMethodBuilder<object> builder;
+      public Service service;
+      private string receivedObject;
+      private TaskAwaiter<string> awaiter;
+```
+
+The exact same fields that we were filling, but we also have new private fields. To see what they are meant for let's go on and see the declaration of `MoveNext()` method:
