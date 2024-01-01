@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncStateMachine", "AsyncStateMachine\AsyncStateMachine.csproj", "{FA8D70B7-DB3F-4F31-AF7F-1BCB4232955B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDecompiled", "ServiceDecompiled\ServiceDecompiled.csproj", "{7BD3C5C4-DF36-4AC5-A1B4-23B0E6F36DFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FA8D70B7-DB3F-4F31-AF7F-1BCB4232955B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA8D70B7-DB3F-4F31-AF7F-1BCB4232955B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA8D70B7-DB3F-4F31-AF7F-1BCB4232955B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD3C5C4-DF36-4AC5-A1B4-23B0E6F36DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD3C5C4-DF36-4AC5-A1B4-23B0E6F36DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD3C5C4-DF36-4AC5-A1B4-23B0E6F36DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD3C5C4-DF36-4AC5-A1B4-23B0E6F36DFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
