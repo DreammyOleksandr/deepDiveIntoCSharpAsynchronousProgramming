@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TaskWhenAll
-build_property.ProjectDir = /Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/
+build_property.ProjectDir = /Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/

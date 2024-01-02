@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj": {}
+    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj": {}
   },
   "projects": {
-    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj": {
+    "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj",
+        "projectUniqueName": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj",
         "projectName": "TaskWhenAll",
-        "projectPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj",
+        "projectPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/TaskWhenAll.csproj",
         "packagesPath": "/Users/bondarenkooleksandr/.nuget/packages/",
-        "outputPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExample/TaskWhenAll/TaskWhenAll/obj/",
+        "outputPath": "/Users/bondarenkooleksandr/C#Projects/DeepDiveIntoСSharpAsynchroniusProgramming/Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bondarenkooleksandr/.nuget/NuGet/NuGet.Config"
