@@ -1,4 +1,4 @@
-# Async State Machine | [Code](../DeepDiveCodeExamples/AsyncStateMachine/)
+# Asynchronous State Machine | [Code](../DeepDiveCodeExamples/AsyncStateMachine/)
 
 ## Theory and definitions
 
@@ -136,7 +136,7 @@ Here we define our JSON local path then instantiate our `Service` with this path
 
 Yep, our functions have outputted in the same way. App works perfectly.
 
-## Decompiled Code | [Code](../DeepDiveCodeExamples/AsyncStateMachine/ServiceDecompiled/)
+## Decompiled Code Review | [Code](../DeepDiveCodeExamples/AsyncStateMachine/ServiceDecompiled/)
 
 _Notice that if you use the IL-Viewer to decompile your code then you will see strange naming of props or functions like `<>d__3`, `t__1` or something like this, also you will see some unusual constructions, which are not common for typical C# coding. It happens because decompiler does not write code for human and it does not understand naming conventions. Also, such naming in code is not allowed in High-level C#, so when you first see the decompiled code you can be a little confused, but we rewrote these parts of this decompiled code to help you understand what happens._
 
@@ -220,3 +220,123 @@ Move on and let's take a look at the `GetParseJSONAsyncStruct` fields that we we
 ```
 
 The exact same fields that we were filling, but we also have new private fields. To see what they are meant for let's go on and see the declaration of `MoveNext()` method:
+
+```C#
+void IAsyncStateMachine.MoveNext()
+      {
+        int num1 = state;
+        object result;
+        try
+        {
+          TaskAwaiter<string> awaiter;
+          int num2;
+          if (num1 != 0)
+          {
+            awaiter = File.ReadAllTextAsync(service._jsonPath, new CancellationToken()).GetAwaiter();
+            if (!awaiter.IsCompleted)
+            {
+              state = num2 = 0;
+              this.awaiter = awaiter;
+              GetParseJSONAsyncStruct stateMachine = this;
+              builder.AwaitUnsafeOnCompleted<TaskAwaiter<string>, GetParseJSONAsyncStruct>(ref awaiter, ref stateMachine);
+              return;
+            }
+          }
+          else
+          {
+            awaiter = this.awaiter;
+            this.awaiter = new TaskAwaiter<string>();
+            state = num2 = -1;
+          }
+          receivedObject = awaiter.GetResult();
+          result = JsonConvert.DeserializeObject(receivedObject);
+        }
+        catch (Exception ex)
+        {
+          state = -2;
+          builder.SetException(ex);
+          return;
+        }
+        state = -2;
+        builder.SetResult(result);
+      }
+```
+
+Let's take a look at this method line-by-line:
+
+```C#
+        int num1 = state;
+        object result;
+```
+
+Here we assign our state to the `num1` variable and it will be operated by method to check the state of execution. `result` variable stores the result of the `MoveNext()` execution further in code. Let's move on and figure out what happens in `try{}` block:
+
+```C#
+ try
+        {
+          TaskAwaiter<string> awaiter;
+          int num2;
+          if (num1 != 0)
+          {
+            awaiter = File.ReadAllTextAsync(service._jsonPath, new CancellationToken()).GetAwaiter();
+            if (!awaiter.IsCompleted)
+            {
+              state = num2 = 0;
+              this.awaiter = awaiter;
+              builder.AwaitUnsafeOnCompleted<TaskAwaiter<string>, GetParseJSONAsyncStruct>(ref awaiter, ref this);
+              return;
+            }
+          }
+          else
+          {
+            awaiter = this.awaiter;
+            this.awaiter = new TaskAwaiter<string>();
+            state = num2 = -1;
+          }
+          receivedObject = awaiter.GetResult();
+          result = JsonConvert.DeserializeObject(receivedObject);
+        }
+```
+
+In `try{}` block we have the body of our asynchronous method (Indeed with some changes). Here we can see that compiler generated the `awaiter` variable of `TaskAwaiter` type. We need it to store the object that will wait for the execution of asynchronous operation and generator also created the `num2` variable (To be honest, this variable does not contain any useful information, so do not give it attention). On the next line we check if our state (`num1`) is _NOT_ equal to 0 (Awaiting). If it is true we are going into the if-block and than we assign awaiter of our main operation (Reading text from file) to the `awaiter` variable with `GetAwaiter()` method. Next we check if the execution is _NOT_ completed. If it is true (The task is not completed) we assign 0 (Awaiting) state to our `state` variable. Then we assign our awaiter to the awaiter field to store there all of the received data. On the next line we move to the main method which releases the asynchronous functionality:
+
+```C#
+  builder.AwaitUnsafeOnCompleted<TaskAwaiter<string>, GetParseJSONAsyncStruct>(ref awaiter, ref this);
+```
+
+This method creates the continuation-delegate and with passed awaiter sets the continuation for the current task. After this we end our method with `return` operator. Lets go further and check the else-block and code after it:
+
+```C#
+          else
+          {
+            awaiter = this.awaiter;
+            this.awaiter = new TaskAwaiter<string>();
+            state = num2 = -1;
+          }
+          receivedObject = awaiter.GetResult();
+          result = JsonConvert.DeserializeObject(receivedObject);
+```
+
+So if our state is not awaiting (!= 0) we go into the else block where we write our state to the `awaiter` variable and create new instance of `awaiter` field. After that we set our state to -1 (Created). After the else-block we assign the result of awaiter to our object and after we do the Deserialization of the `receivedObject`.
+
+In the catch-block:
+
+```C#
+catch (Exception ex)
+        {
+          state = -2;
+          builder.SetException(ex);
+          return;
+        }
+```
+
+We just set the state of execution to -2 (Completed) and right after we set the exception which possibly could be thrown while task execution. Right after this we:
+
+```C#
+        state = -2;
+        builder.SetResult(result);
+```
+
+Set the state to -2 (Completed) and Set the result of our execution.
+
+## Decompiled Code Execution | [Code]()

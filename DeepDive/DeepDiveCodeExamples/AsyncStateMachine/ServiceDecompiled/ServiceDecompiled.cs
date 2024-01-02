@@ -71,8 +71,7 @@ namespace AsyncStateMachine.Services
             {
               state = num2 = 0;
               this.awaiter = awaiter;
-              GetParseJSONAsyncStruct stateMachine = this;
-              builder.AwaitUnsafeOnCompleted<TaskAwaiter<string>, GetParseJSONAsyncStruct>(ref awaiter, ref stateMachine);
+              builder.AwaitUnsafeOnCompleted<TaskAwaiter<string>, GetParseJSONAsyncStruct>(ref awaiter, ref this);
               return;
             }
           }
