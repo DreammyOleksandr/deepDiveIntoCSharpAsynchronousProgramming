@@ -25,7 +25,7 @@ enum State
 
 ## Code Example
 
-For these app you need a **[Newtonsoft.Json](https://www.newtonsoft.com/json)** NuGet Package to be installed.
+For this app you need a **[Newtonsoft.Json](https://www.newtonsoft.com/json)** NuGet Package to be installed.
 
 Keep moving forward and let us navigate you through our code example (which was used in [Task.WhenAll()](../../Basics/BasicsCodeExamples/TaskWhenAll/TaskWhenAll/) section) by showing executable functions and calling code:
 
