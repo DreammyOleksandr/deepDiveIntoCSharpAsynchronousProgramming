@@ -11,6 +11,7 @@ Now let's begin our amusing trip from [basics](./Basics/README.md) to bring you 
 ✅ Contents:
 
 - **[Basics](./Basics/)**
+- **[Deep Dive](./DeepDive/)**
 - **[Extra](./Extra/)**
 
 📚 Sources:

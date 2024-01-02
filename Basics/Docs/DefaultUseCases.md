@@ -137,7 +137,7 @@ Alex has done vacuum cleaning
 Process finished with exit code 0.
 ```
 
-Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`](./TaskWhenAll.md), or [`Parallel.ForEach`]() Methods)
+Here we can see that Alex and Lila were doing their work at the same time, or _In Parallel_ (But, it is not parallel by full meaning of a word, because in parallel programming all functions have to execute asynchronously, but in our case one func is executed synchronously on Main Thread and only second func is executed Asynchronously. To execute right parallel programming in C#, we have [`Task.WhenAll()`](./TaskWhenAll.md), or [`Parallel.ForEach`](../../Extra/Docs/ParallelForEachVSTaskWhenAll.md) Methods)
 
 <p>
     <img src="./Default Use Cases Images/ParallelDiagram.png">
