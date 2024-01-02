@@ -1,5 +1,12 @@
 # Asynchronous State Machine | [Code](../DeepDiveCodeExamples/AsyncStateMachine/)
 
+- [Asynchronous State Machine | Code](#asynchronous-state-machine--code)
+  - [Theory and definitions](#theory-and-definitions)
+  - [Code Example](#code-example)
+  - [Decompiled Code Review | Code](#decompiled-code-review--code)
+  - [Decompiled Code Execution | Code](#decompiled-code-execution--code)
+  - [Conclusion](#conclusion)
+
 ## Theory and definitions
 
 This particular part presents you one of the main C# Asynchronous programming concepts: **Asynchronous State Machine**. This exact code structure is hidden behind the `async/await` keywords and all of the _magic_ is done by it.
@@ -339,4 +346,77 @@ We just set the state of execution to -2 (Completed) and right after we set the 
 
 Set the state to -2 (Completed) and Set the result of our execution.
 
-## Decompiled Code Execution | [Code]()
+## Decompiled Code Execution | [Code](../DeepDiveCodeExamples/AsyncStateMachine/AsyncStateMachine_Decompiled)
+
+We can understand that the decompiled code is the true code which is hidden behind `async/await`. So, we can put instead of our `Service` firstly written code the decompiled one and expect the same result, so lets do it:
+
+```console
+[
+  {
+    "id": 1,
+    "first_name": "Piper",
+    "last_name": "Durdy",
+    "email": "pdurdy0@nytimes.com"
+  },
+  {
+    "id": 2,
+    "first_name": "Elva",
+    "last_name": "Stearns",
+    "email": "estearns1@japanpost.jp"
+  },
+
+...
+
+  {
+    "id": 299,
+    "first_name": "Mozes",
+    "last_name": "Oen",
+    "email": "moen8a@marriott.com"
+  },
+  {
+    "id": 300,
+    "first_name": "Kessiah",
+    "last_name": "Mustill",
+    "email": "kmustill8b@vimeo.com"
+  }
+]
+[
+  {
+    "id": 1,
+    "first_name": "Piper",
+    "last_name": "Durdy",
+    "email": "pdurdy0@nytimes.com"
+  },
+  {
+    "id": 2,
+    "first_name": "Elva",
+    "last_name": "Stearns",
+    "email": "estearns1@japanpost.jp"
+  },
+
+...
+
+  {
+    "id": 299,
+    "first_name": "Mozes",
+    "last_name": "Oen",
+    "email": "moen8a@marriott.com"
+  },
+  {
+    "id": 300,
+    "first_name": "Kessiah",
+    "last_name": "Mustill",
+    "email": "kmustill8b@vimeo.com"
+  }
+]
+```
+
+Yep, the results absolutely the same. We can see that our code executed as we expected. Now lets take a look at the _Deep_ execution of await operator on Decompiled level:
+
+<p>
+  <img src="./AsyncStateMachine Images/AsyncStateMachineInside.png" alt="Ooops..."/>
+</p>
+
+## Conclusion
+
+We found out that there is a difficult code structure hidden behind `async/await` keywords called **Asynchronous State Machine**. This state machine describes the asynchronous functionality of your code and provides deep abstraction for high-level C# in case to help developers to minimize code work and to be more productive while writing the asynchronous code.
