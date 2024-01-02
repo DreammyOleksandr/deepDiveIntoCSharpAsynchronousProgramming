@@ -1,10 +1,9 @@
 # Asynchronous State Machine | [Code](../DeepDiveCodeExamples/AsyncStateMachine/)
 
-- [Asynchronous State Machine | Code](#asynchronous-state-machine--code)
   - [Theory and definitions](#theory-and-definitions)
   - [Code Example](#code-example)
-  - [Decompiled Code Review | Code](#decompiled-code-review--code)
-  - [Decompiled Code Execution | Code](#decompiled-code-execution--code)
+  - [Decompiled Code Review](#decompiled-code-review--code)
+  - [Decompiled Code Execution](#decompiled-code-execution--code)
   - [Conclusion](#conclusion)
 
 ## Theory and definitions
