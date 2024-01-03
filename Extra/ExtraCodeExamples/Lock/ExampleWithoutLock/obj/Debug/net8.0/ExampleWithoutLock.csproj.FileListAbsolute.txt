@@ -1,0 +1,15 @@
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\bin\Debug\net8.0\ExampleWithoutLock.exe
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\bin\Debug\net8.0\ExampleWithoutLock.deps.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\bin\Debug\net8.0\ExampleWithoutLock.runtimeconfig.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\bin\Debug\net8.0\ExampleWithoutLock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\bin\Debug\net8.0\ExampleWithoutLock.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.AssemblyInfoInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.AssemblyInfo.cs
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.csproj.CoreCompileInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.sourcelink.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\refint\ExampleWithoutLock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ExampleWithoutLock.genruntimeconfig.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\ExampleWithoutLock\obj\Debug\net8.0\ref\ExampleWithoutLock.dll
