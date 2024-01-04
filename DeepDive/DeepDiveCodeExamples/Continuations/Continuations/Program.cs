@@ -6,11 +6,16 @@ string secondLocalDbPath = @"/Users/bondarenkooleksandr/SecondDataBase.json";
 
 Service<Customer> service = new();
 
-service.GetParseLocalJSON(firstLocalDbPath)
-    .ContinueWith(customers => customers.Result.Where(x => x.Email.Contains("ol")))
-    .ContinueWith(sortedCustomers =>
+await service.GetParseLocalJSON(firstLocalDbPath)
+    .ContinueWith(taskResult =>
     {
-        IEnumerable<Customer> customers = sortedCustomers.Result;
+        return (taskResult.Status == TaskStatus.Faulted)
+            ? throw new Exception("Something went wrong")
+            : taskResult.Result.Where(x => x.Email.Contains("ol"));
+    })
+    .ContinueWith(taskResult =>
+    {
+        IEnumerable<Customer> customers = taskResult.Result;
         foreach (var customer in customers)
             Console.WriteLine(customer.ToString());
     });
@@ -23,4 +28,3 @@ await service.GetParseLocalJSON(secondLocalDbPath)
         foreach (var customer in customers)
             Console.WriteLine(customer.ToString());
     });
-    
