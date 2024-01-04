@@ -20,6 +20,8 @@ await service.GetParseLocalJSON(firstLocalDbPath)
             Console.WriteLine(customer.ToString());
     });
 
+Console.WriteLine();
+
 await service.GetParseLocalJSON(secondLocalDbPath)
     .ContinueWith(taskResult =>
     {
