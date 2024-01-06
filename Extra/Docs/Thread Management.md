@@ -1,6 +1,6 @@
-# Lock operator | [Code](../ExtraCodeExamples/Lock/Program.cs)
+# Thread Management | [Code](../ExtraCodeExamples/ThreadManagement)
 
-It's time to talk about thread synchronization. First of all, let's discuss one of the fundamental principles of synchronization - `blocking`. For a
+It's time to talk about thread synchronization. First of all, let's discuss one of the fundamental principles of synchronization - `locking`. For a
 better understanding, let's provide a real-life example that will help you fully grasp this concept.
 
 Imagine a situation where we have a certain number of students living in a dormitory with one kitchen equipped with a stove with four burners.
@@ -157,7 +157,9 @@ cooking yet have already spent some time on preparing the dish. The issue here i
 modify one global variable, `cookingTime`. This leads to the incorrect operation of our entire simulation and inaccurate cooking time 
 representation.
 
-How to resolve this situation then? Here is where the principle of thread synchronization - `blocking` comes in handy. Its main purpose is to
+## Operator lock
+
+How to resolve this situation then? Here is where the principle of thread synchronization - `locking` comes in handy. Its main purpose is to
 restrict access to shared resources when they are being used by any other thread. To implement this principle, we will use the `lock` keyword,
 which indicates that the next code block will be restricted for use.
 
@@ -265,11 +267,144 @@ and the result may vary for each run.*
 
 Now we see that the students are cooking their meals one by one, and the time they spend on cooking is displayed correctly. Thus, by using
 the `lock` statement, we have made our code synchronous and avoided unpredictable changes to global variables. We made our threads wait for 
-the completion of other threads, thereby realizing the principle of synchronicity - `blocking`.
+the completion of other threads, thereby realizing the principle of synchronicity - `locking`.
+
+## Class Monitor
+
+We continue our exploration of thread synchronization, this time using the static class Monitor. It provides a wide range of useful tools that
+allow for more flexible organization of thread work with critical sections.
+
+Let's consider its main methods:
+
+- **Monitor.Enter(object obj)** - Entry point into a critical section, which locks the object passed to the method for other threads. It works similarly
+to the `lock` statement, where we pass an object - a lock. When the first thread visits the `Monitor.Enter(object obj)` method, the passed
+object is locked, locking all other threads, and the thread that locked it continues its work.
+
+- **Monitor.Exit(object obj)** - Exit point from the critical section, which unlocks the passed object, allowing another thread to enter the critical
+section, locking this object again.
+
+*Using the Monitor.Enter(object obj) and Monitor.Exit(object obj) methods in pair is crucial to avoid creating deadlocks (a state where one thread has
+locked access to a critical section for other threads and hasn't unlocked it after completing all actions, thereby freezing the program execution).*
+
+- **Monitor.TryEnter(object obj)** - A method that allows the current thread to check if the passed object is locked or not. Returns `true` if it is
+free and`false` if it is locked.
+
+- **Monitor.Pulse(object obj)** - Sends a signal to one of the threads in waiting, indicating that the current thread has finished its work and
+unlocked the passed object.
+
+- **Monitor.PulseAll(object obj)** - Sends a signal to all threads in waiting, indicating that the current thread has finished its work and unlocked
+the passed object.
+
+- **Monitor.Wait(object obj)** - Unlocks the passed object, puts the current thread into a queue, where it waits for a call to the
+`Monitor.Pulse(object obj)` or `Monitor.PulseAll(object obj)` method to resume its work.
+
+Let's recall our previous example of synchronization and refactor it using locking through the Monitor class:
+
+```csharp
+int freeHotplates = 4;
+int averageHotplatesUse = 3;
+int cookingTime;
+
+// determine our glamorous apron
+object apron = new();
+
+// tell our students that it's time for lunch
+for (int i = 1; i <= 4; i++)
+{
+    Thread student = new Thread(PrepareDishWhithMonitor);
+    student.Name = $"Student {i}";
+    student.Start(averageHotplatesUse);
+}
+
+void PrepareDishWhithMonitor(object? obj)
+{
+    if (obj is int neededHotplates)
+    {
+
+        // one student puts on an apron and starts cooking
+        Monitor.Enter(apron);
+
+        try
+        {
+            string currentStudent = Thread.CurrentThread.Name!;
+            int usedHotplates = GetFreeHotplates(neededHotplates);
+            float dishReadiness = 0;
+            float hotplatesInpact = 5.0f;
+
+            cookingTime = 0;
+
+            // simulating the cooking process.
+            while (dishReadiness < 100)
+            {
+                Thread.Sleep(100);
+                dishReadiness += usedHotplates * hotplatesInpact;
+                cookingTime++;
+
+                Console.WriteLine($"{currentStudent} cooked the dish at {dishReadiness} percent in {cookingTime} minutes");
+
+                // acquiring the necessary available burners
+                usedHotplates += GetFreeHotplates(neededHotplates - usedHotplates);
+            }
+
+            // turning off the burners
+            freeHotplates += usedHotplates;
+        }
+        // finish the job even when something went wrong
+        finally
+        {
+            Monitor.Exit(apron);
+            // student passed the apron to the next
+        }
+    }
+}
+```
+
+Here, we replaced `lock(apron)` with `Monitor.Enter(apron)`, and wrapped the entire critical section in a try…finally block. In the finally block,
+we called `Monitor.Exit(apron)` to ensure the unlocking of our lock object.
+
+To make sure everything is working, let's run our simulation:
+
+```console
+Student 3 cooked the dish at 15 percent in 1 minutes
+Student 3 cooked the dish at 30 percent in 2 minutes
+Student 3 cooked the dish at 45 percent in 3 minutes
+Student 3 cooked the dish at 60 percent in 4 minutes
+Student 3 cooked the dish at 75 percent in 5 minutes
+Student 3 cooked the dish at 90 percent in 6 minutes
+Student 3 cooked the dish at 105 percent in 7 minutes
+Student 1 cooked the dish at 15 percent in 1 minutes
+Student 1 cooked the dish at 30 percent in 2 minutes
+Student 1 cooked the dish at 45 percent in 3 minutes
+Student 1 cooked the dish at 60 percent in 4 minutes
+Student 1 cooked the dish at 75 percent in 5 minutes
+Student 1 cooked the dish at 90 percent in 6 minutes
+Student 1 cooked the dish at 105 percent in 7 minutes
+Student 2 cooked the dish at 15 percent in 1 minutes
+Student 2 cooked the dish at 30 percent in 2 minutes
+Student 2 cooked the dish at 45 percent in 3 minutes
+Student 2 cooked the dish at 60 percent in 4 minutes
+Student 2 cooked the dish at 75 percent in 5 minutes
+Student 2 cooked the dish at 90 percent in 6 minutes
+Student 2 cooked the dish at 105 percent in 7 minutes
+Student 4 cooked the dish at 15 percent in 1 minutes
+Student 4 cooked the dish at 30 percent in 2 minutes
+Student 4 cooked the dish at 45 percent in 3 minutes
+Student 4 cooked the dish at 60 percent in 4 minutes
+Student 4 cooked the dish at 75 percent in 5 minutes
+Student 4 cooked the dish at 90 percent in 6 minutes
+Student 4 cooked the dish at 105 percent in 7 minutes
+```
+We can see that the result hasn't changed, and everything is functioning correctly.
+
+The use of the static Monitor class for thread synchronization is an important improvement compared to the regular `lock` statement, which is
+essentially syntactic sugar for using this class. During compilation, `lock` is transformed into a similar structure to what we used in the above
+example. However, due to the greater flexibility of the Monitor class, developers need to pay more attention to entry and exit points of the
+critical section, carefully considering all possible execution scenarios to avoid deadlocks. In practice, in most cases, the functionality of the
+`lock` statement is sufficient.
 
 ## Conclusion
 
-Now that you understand the principle of blocking, let's summarize our knowledge and discuss recommendations for using the `lock` statement.
+Now that you understand the principle of locking, let's summarize our knowledge and discuss recommendations for using the `lock` statement.
 
 The `lock` statement is used to ensure that a block of code runs in a mutually exclusive manner, meaning that only one thread can execute the
 code block at a time. This is particularly useful for preventing race conditions and ensuring proper synchronization when multiple threads are
