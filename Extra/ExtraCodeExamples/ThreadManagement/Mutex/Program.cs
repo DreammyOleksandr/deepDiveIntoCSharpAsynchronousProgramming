@@ -4,8 +4,8 @@ int averageHotplatesUse = 3;
 // determine the cooking time - our shared resources
 int cookingTime;
 
-// create an instance of AutoResetEvent
-AutoResetEvent threadsHandler = new AutoResetEvent(true);
+// create an instance of Mutex
+Mutex mutex = new();
 
 // tell our students that it's time for lunch
 for (int i = 1; i <= 4; i++)
@@ -21,7 +21,7 @@ void PrepareDishWhithAutoResetEvent(object? obj)
     {
 
         // one student puts on an apron and starts cooking
-        threadsHandler.WaitOne();
+        mutex.WaitOne();
 
         try
         {
@@ -51,7 +51,7 @@ void PrepareDishWhithAutoResetEvent(object? obj)
         // finish the job even when something went wrong
         finally
         {
-            threadsHandler.Set();
+            mutex.ReleaseMutex();
             // student passed the apron to the next
         }
     }
