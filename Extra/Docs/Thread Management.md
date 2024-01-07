@@ -402,7 +402,7 @@ example. However, due to the greater flexibility of the Monitor class, developer
 critical section, carefully considering all possible execution scenarios to avoid deadlocks. In practice, in most cases, the functionality of the
 `lock` statement is sufficient.
 
-## AutoResetEvent
+## Class AutoResetEvent
 
 Another way to synchronize our threads is to use an instance of the `AutoResetEvent` class. It utilizes a signaling system that we can control
 using a series of the following methods:
@@ -513,6 +513,116 @@ Student 4 cooked the dish at 60 percent in 4 minutes
 Student 4 cooked the dish at 75 percent in 5 minutes
 Student 4 cooked the dish at 90 percent in 6 minutes
 Student 4 cooked the dish at 105 percent in 7 minutes
+```
+
+## Class Mutex
+
+The `Mutex` class operates similarly to the `AutoResetEvent` class. The difference lies in using a mutex(mutual exclusion object) instead of
+signals. Mutual exclusion is a concept that ensures only one thread can execute a specific piece of code or code block at a given time. Here,
+again, there's nothing new.
+
+We'll only need two methods for our work:
+
+- **WaitOne()**: Blocks the calling thread until it acquires the mutex.
+- **ReleaseMutex()**: Releases the mutex, allowing other threads or processes to acquire it.
+
+Let's adapt our example to use the Mutex class:
+
+```csharp
+int freeHotplates = 4;
+int averageHotplatesUse = 3;
+
+// determine the cooking time - our shared resources
+int cookingTime;
+
+// create an instance of Mutex
+Mutex mutex = new();
+
+// tell our students that it's time for lunch
+for (int i = 1; i <= 4; i++)
+{
+    Thread student = new Thread(PrepareDishWhithAutoResetEvent);
+    student.Name = $"Student {i}";
+    student.Start(averageHotplatesUse);
+}
+
+void PrepareDishWhithAutoResetEvent(object? obj)
+{
+    if (obj is int neededHotplates)
+    {
+
+        // one student puts on an apron and starts cooking
+        mutex.WaitOne();
+
+        try
+        {
+            string currentStudent = Thread.CurrentThread.Name!;
+            int usedHotplates = GetFreeHotplates(neededHotplates);
+            float dishReadiness = 0;
+            float hotplatesInpact = 5.0f;
+
+            cookingTime = 0;
+
+            // simulating the cooking process.
+            while (dishReadiness < 100)
+            {
+                Thread.Sleep(100);
+                dishReadiness += usedHotplates * hotplatesInpact;
+                cookingTime++;
+
+                Console.WriteLine($"{currentStudent} cooked the dish at {dishReadiness} percent in {cookingTime} minutes");
+
+                // acquiring the necessary available burners
+                usedHotplates += GetFreeHotplates(neededHotplates - usedHotplates);
+            }
+
+            // turning off the burners
+            freeHotplates += usedHotplates;
+        }
+        // finish the job even when something went wrong
+        finally
+        {
+            mutex.ReleaseMutex();
+            // student passed the apron to the next
+        }
+    }
+}
+
+```
+
+We can see that we simply replaced the instance and methods of the AutoResetEvent class with their alternatives from the Mutex class.
+
+Result of the execution:
+
+```console
+Student 1 cooked the dish at 15 percent in 1 minutes
+Student 1 cooked the dish at 30 percent in 2 minutes
+Student 1 cooked the dish at 45 percent in 3 minutes
+Student 1 cooked the dish at 60 percent in 4 minutes
+Student 1 cooked the dish at 75 percent in 5 minutes
+Student 1 cooked the dish at 90 percent in 6 minutes
+Student 1 cooked the dish at 105 percent in 7 minutes
+Student 4 cooked the dish at 15 percent in 1 minutes
+Student 4 cooked the dish at 30 percent in 2 minutes
+Student 4 cooked the dish at 45 percent in 3 minutes
+Student 4 cooked the dish at 60 percent in 4 minutes
+Student 4 cooked the dish at 75 percent in 5 minutes
+Student 4 cooked the dish at 90 percent in 6 minutes
+Student 4 cooked the dish at 105 percent in 7 minutes
+Student 2 cooked the dish at 15 percent in 1 minutes
+Student 2 cooked the dish at 30 percent in 2 minutes
+Student 2 cooked the dish at 45 percent in 3 minutes
+Student 2 cooked the dish at 60 percent in 4 minutes
+Student 2 cooked the dish at 75 percent in 5 minutes
+Student 2 cooked the dish at 90 percent in 6 minutes
+Student 2 cooked the dish at 105 percent in 7 minutes
+Student 3 cooked the dish at 15 percent in 1 minutes
+Student 3 cooked the dish at 30 percent in 2 minutes
+Student 3 cooked the dish at 45 percent in 3 minutes
+Student 3 cooked the dish at 60 percent in 4 minutes
+Student 3 cooked the dish at 75 percent in 5 minutes
+Student 3 cooked the dish at 90 percent in 6 minutes
+Student 3 cooked the dish at 105 percent in 7 minutes
 ```
 
 ## Conclusion
