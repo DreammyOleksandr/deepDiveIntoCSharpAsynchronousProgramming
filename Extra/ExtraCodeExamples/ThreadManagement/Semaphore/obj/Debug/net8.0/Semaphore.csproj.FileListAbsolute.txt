@@ -1,0 +1,15 @@
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\bin\Debug\net8.0\Semaphore.exe
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\bin\Debug\net8.0\Semaphore.deps.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\bin\Debug\net8.0\Semaphore.runtimeconfig.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\bin\Debug\net8.0\Semaphore.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\bin\Debug\net8.0\Semaphore.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.AssemblyInfoInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.AssemblyInfo.cs
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.csproj.CoreCompileInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.sourcelink.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\refint\Semaphore.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\Semaphore.genruntimeconfig.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\Semaphore\obj\Debug\net8.0\ref\Semaphore.dll
