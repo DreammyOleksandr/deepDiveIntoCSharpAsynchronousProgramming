@@ -625,6 +625,108 @@ Student 3 cooked the dish at 90 percent in 6 minutes
 Student 3 cooked the dish at 105 percent in 7 minutes
 ```
 
+## Class Semaphore
+
+The last synchronization control tool we'll explore in this section is the `Semaphore` class. Its key feature is that, unlike other 
+classes, it allows us to set the number of threads we plan to concurrently use in a critical section. To use it, we need to create
+an instance of the class using one of its constructors:
+
+- **Semaphore(int initialCount, int maximumCount)** - creates an instance of the Semaphore class with the initial number of
+allowed threads specified as initialCount and the maximum count as maximumCount;
+- **Semaphore(int initialCount, int maximumCount, string? name)** - additionally sets the semaphore's name;
+- **Semaphore(int initialCount, int maximumCount, string? name, out bool createdNew)** - additionally includes an output parameter
+`createdNew`, which allows checking whether an instance with the given name was created. If the name is already in use,
+`createdNew` will be false; otherwise, it will be true.
+
+After creating a `Semaphore` object, the subsequent working principle is nearly identical to using the Mutex class. Let's consider the 
+primary methods of operation:
+
+- **WaitOne()**: Blocks the calling thread until it acquires a unit.
+- **Release()**: Releases a unit, making it available for other threads.
+
+As we can see, everything is quite familiar. Now let's look at how the Semaphore class works.
+
+Let's take the students from our previous example and imagine a situation where they gather to go to the library. Due to renovation work,
+only three students can be in the library at the same time. The total number of students wishing to visit the library is 7. Now let's
+illustrate in code, using the Semaphore class, how students will visit this facility:
+
+```csharp
+int studentNumber = 7;
+int maxStudentInLibrary = 3;
+
+// create an instance of Semaphore with a set number of threads(students)
+Semaphore semaphore = new Semaphore(maxStudentInLibrary, maxStudentInLibrary);
+
+// students decided to go to the library
+for (int i = 1; i <= studentNumber; i++)
+{
+    Thread student = new Thread(VisitLibrary);
+    student.Name = $"Student {i}";
+    student.Start();
+}
+
+// simulation of visiting the library
+void VisitLibrary()
+{
+    // admitting only students for whom there is space and not allowing others to enter
+    semaphore.WaitOne();
+
+    try
+    {
+        string currentStudent = Thread.CurrentThread.Name!;
+        Random random = new Random();
+
+        Console.WriteLine($"{currentStudent} entered the library.");
+
+        Thread.Sleep(100);
+
+        Console.WriteLine($"{currentStudent} is reading a book");
+
+        Thread.Sleep(random.Next(100, 1000));
+
+        Console.WriteLine($"{currentStudent} left the library");
+    }
+    finally 
+    {
+        //  student leaves the library, freeing up a spot
+            semaphore.Release(); 
+    }
+}
+```
+
+Here, everything is quite simple. First, through a loop, we create the necessary number of threads that will represent our students. Next,
+we create a method that simulates visiting the library. In this method, using the **try…finally** construct, we define the beginning of the 
+critical section, where we call the **semaphore.WaitOne()** instruction, and the end, which we mark with a **semaphore.Release()** call in the
+**finally** block. The shared functionality that can use shared resources is located in the **try** block – this is the critical section.
+
+Now let's run the simulation and look at the result:
+
+```console
+Student 2 entered the library.
+Student 1 entered the library.
+Student 3 entered the library.
+Student 1 is reading a book
+Student 2 is reading a book
+Student 3 is reading a book
+Student 2 left the library
+Student 4 entered the library.
+Student 4 is reading a book
+Student 1 left the library
+Student 5 entered the library.
+Student 5 is reading a book
+Student 3 left the library
+Student 6 entered the library.
+Student 6 is reading a book
+Student 4 left the library
+Student 7 entered the library.
+Student 7 is reading a book
+Student 5 left the library
+Student 6 left the library
+Student 7 left the library
+```
+We see that our concept works as intended. At any given moment, there are no more than three students in the library, so our instance of the
+`Semaphore` class has successfully handled the task.
+
 ## Conclusion
 
 Now that you understand the principle of locking, let's summarize our knowledge and discuss recommendations for using the `lock` statement.
