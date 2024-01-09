@@ -1,0 +1,15 @@
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\bin\Debug\net8.0\AutoResetEvent.exe
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\bin\Debug\net8.0\AutoResetEvent.deps.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\bin\Debug\net8.0\AutoResetEvent.runtimeconfig.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\bin\Debug\net8.0\AutoResetEvent.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\bin\Debug\net8.0\AutoResetEvent.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.AssemblyInfoInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.AssemblyInfo.cs
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.csproj.CoreCompileInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.sourcelink.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\refint\AutoResetEvent.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\AutoResetEvent.genruntimeconfig.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\ThreadManagement\AutoResetEvent\obj\Debug\net8.0\ref\AutoResetEvent.dll

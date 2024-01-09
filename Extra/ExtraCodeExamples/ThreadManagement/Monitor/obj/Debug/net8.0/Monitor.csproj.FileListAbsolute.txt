@@ -1,0 +1,15 @@
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\bin\Debug\net8.0\Monitor.exe
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\bin\Debug\net8.0\Monitor.deps.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\bin\Debug\net8.0\Monitor.runtimeconfig.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\bin\Debug\net8.0\Monitor.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\bin\Debug\net8.0\Monitor.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.AssemblyInfoInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.AssemblyInfo.cs
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.csproj.CoreCompileInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.sourcelink.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\refint\Monitor.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\Monitor.genruntimeconfig.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Thread Management\Monitor\obj\Debug\net8.0\ref\Monitor.dll

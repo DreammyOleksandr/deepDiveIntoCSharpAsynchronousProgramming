@@ -1,0 +1,15 @@
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\bin\Debug\net8.0\Lock.exe
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\bin\Debug\net8.0\Lock.deps.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\bin\Debug\net8.0\Lock.runtimeconfig.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\bin\Debug\net8.0\Lock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\bin\Debug\net8.0\Lock.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.AssemblyInfoInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.AssemblyInfo.cs
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.csproj.CoreCompileInputs.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.sourcelink.json
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\refint\Lock.dll
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.pdb
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\Lock.genruntimeconfig.cache
+C:\Users\gorch\OneDrive\Desktop\async\deepDiveIntoCSharpAsynchronousProgramming\Extra\ExtraCodeExamples\Lock\obj\Debug\net8.0\ref\Lock.dll
