@@ -2,9 +2,9 @@
 
 - [Operator lock](#operator-lock--code)
 - [Class Monitor](#class-monitor--code)
-- [Class AutoResetEvent](class-autoResetEvent--code)
-- [Class Mutex](class-mutex--code)
-- [Class Semaphore](class-semaphore--code)
+- [Class AutoResetEvent](#class-autoresetevent--code)
+- [Class Mutex](#class-mutex--code)
+- [Class Semaphore](#class-semaphore--code)
 - [Conclusion](#conclusion)
 
 It's time to talk about thread synchronization. First of all, let's discuss one of the fundamental principles of synchronization - `locking`. For a
