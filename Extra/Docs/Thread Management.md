@@ -2,7 +2,7 @@
 
 - [Operator lock](#operator-lock--code)
 - [Class Monitor](#class-monitor--code)
-- [Class AutoResetEvent](class-autoresetevent--code)
+- [Class AutoResetEvent](class-autoResetEvent--code)
 - [Class Mutex](class-mutex--code)
 - [Class Semaphore](class-semaphore--code)
 - [Conclusion](#conclusion)
