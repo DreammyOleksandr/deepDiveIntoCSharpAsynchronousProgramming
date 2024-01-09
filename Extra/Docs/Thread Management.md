@@ -1,5 +1,12 @@
 # Thread Management | [Code](../ExtraCodeExamples/ThreadManagement)
 
+- [Operator lock](#operator-lock--code)
+- [Class Monitor](#class-monitor--code)
+- [Class AutoResetEvent](class-autoresetevent--code)
+- [Class Mutex](class-mutex--code)
+- [Class Semaphore](class-semaphore--code)
+- [Conclusion](#conclusion)
+
 It's time to talk about thread synchronization. First of all, let's discuss one of the fundamental principles of synchronization - `locking`. For a
 better understanding, let's provide a real-life example that will help you fully grasp this concept.
 
@@ -157,7 +164,7 @@ cooking yet have already spent some time on preparing the dish. The issue here i
 modify one global variable, `cookingTime`. This leads to the incorrect operation of our entire simulation and inaccurate cooking time 
 representation.
 
-## Operator lock
+## Operator lock | [Code](../ExtraCodeExamples/ThreadManagement/Lock/Program.cs)
 
 How to resolve this situation then? Here is where the principle of thread synchronization - `locking` comes in handy. Its main purpose is to
 restrict access to shared resources when they are being used by any other thread. To implement this principle, we will use the `lock` keyword,
@@ -269,7 +276,7 @@ Now we see that the students are cooking their meals one by one, and the time th
 the `lock` statement, we have made our code synchronous and avoided unpredictable changes to global variables. We made our threads wait for 
 the completion of other threads, thereby realizing the principle of synchronicity - `locking`.
 
-## Class Monitor
+## Class Monitor | [Code](../ExtraCodeExamples/ThreadManagement/Monitor/Program.cs)
 
 We continue our exploration of thread synchronization, this time using the static class Monitor. It provides a wide range of useful tools that
 allow for more flexible organization of thread work with critical sections.
@@ -402,7 +409,7 @@ example. However, due to the greater flexibility of the Monitor class, developer
 critical section, carefully considering all possible execution scenarios to avoid deadlocks. In practice, in most cases, the functionality of the
 `lock` statement is sufficient.
 
-## Class AutoResetEvent
+## Class AutoResetEvent | [Code](../ExtraCodeExamples/ThreadManagement/AutoResetEvent/Program.cs)
 
 Another way to synchronize our threads is to use an instance of the `AutoResetEvent` class. It utilizes a signaling system that we can control
 using a series of the following methods:
@@ -515,7 +522,7 @@ Student 4 cooked the dish at 90 percent in 6 minutes
 Student 4 cooked the dish at 105 percent in 7 minutes
 ```
 
-## Class Mutex
+## Class Mutex | [Code](../ExtraCodeExamples/ThreadManagement/Mutex/Program.cs)
 
 The `Mutex` class operates similarly to the `AutoResetEvent` class. The difference lies in using a mutex(mutual exclusion object) instead of
 signals. Mutual exclusion is a concept that ensures only one thread can execute a specific piece of code or code block at a given time. Here,
@@ -625,7 +632,7 @@ Student 3 cooked the dish at 90 percent in 6 minutes
 Student 3 cooked the dish at 105 percent in 7 minutes
 ```
 
-## Class Semaphore
+## Class Semaphore | [Code](../ExtraCodeExamples/ThreadManagement/Semaphore/Program.cs)
 
 The last synchronization control tool we'll explore in this section is the `Semaphore` class. Its key feature is that, unlike other 
 classes, it allows us to set the number of threads we plan to concurrently use in a critical section. To use it, we need to create
