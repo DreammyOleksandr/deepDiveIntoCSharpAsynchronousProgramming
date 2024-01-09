@@ -729,18 +729,72 @@ We see that our concept works as intended. At any given moment, there are no mor
 
 ## Conclusion
 
-Now that you understand the principle of locking, let's summarize our knowledge and discuss recommendations for using the `lock` statement.
+Now that you understand the principle of locking, let's summarize our knowledge and discuss recommendations for using all the tools mentioned above.
+
+#### **Operator lock**
 
 The `lock` statement is used to ensure that a block of code runs in a mutually exclusive manner, meaning that only one thread can execute the
 code block at a time. This is particularly useful for preventing race conditions and ensuring proper synchronization when multiple threads are
 accessing shared resources.
 
-Our recommendations for using the lock statement:
+Our recommendations for using the `lock` statement:
 
-1. **Use `lock` when multiple threads need to access shared data safely**
-2. **Keep critical sections short**
-      - Minimize the amount of work performed within a `lock` statement to reduce the time the lock is held. Long-running critical sections can increase the likelihood of contention and reduce overall performance.
-3. **Avoid Deadlocks**
-      - Be cautious of nested locks and ensure that the locks are acquired and released in the same order across different parts of your code. Deadlocks can occur when multiple threads are waiting for each other to release a `lock`.
-4. **Avoid Locking on Public Objects**
-      - Locking on public objects or types might lead to unintended consequences and can create opportunities for deadlocks if other code also locks on the same objects.
+1. Use `lock` when multiple threads need to access shared data safely;
+2. Avoid Deadlocks;
+      - Be cautious of nested locks and ensure that the locks are acquired and released in the same order across different parts of your code. Deadlocks can occur when multiple threads are waiting for each other to release a lock;
+
+#### **Class Monitor**
+
+The `Monitor` class is used for thread synchronization and managing access to shared resources. It provides a way to create mutually exclusive locks,
+ensuring that only one thread can access a particular section of code or data at a time.
+
+Our recommendations for using the `Monitor` class:
+
+1. Always call **Monitor.Enter(object obj)** and **Monitor.Exit(object obj)** methods in pairs;
+2. Always use the same object for synchronization;
+3. Use the **try...finally** construct to ensure the avoidance of deadlocks;
+4. Try to use `lock` statement instead of Monitor methods directly;
+
+
+#### **Class AutoResetEvent**
+
+The `AutoResetEvent` class provides a synchronization primitive that allows one thread to signal another thread that a particular event has occurred.
+
+Our recommendations for using the `AutoResetEvent` class:
+
+1. When initializing, always consider the required initial signal state of the created instance;
+    - To put it in a signaled state, place `true` in the first parameter of the `AutoResetEvent` constructor. To have the primitive in a non-signaled state, place `false`;
+2. Use the **try...finally** construct to ensure the avoidance of deadlocks;
+3. Along with the **Set()** method, there should always be either the **WaitOne()** or **Reset()** method;
+   
+#### **Class Mutex**
+
+The `Mutex` (short for mutual exclusion) is a synchronization primitive used to control access to a shared resource by multiple threads. 
+
+Our recommendations for using the `Mutex` class:
+
+1. Always call the **WaitOne()** and **ReleaseMutex()** methods in pairs;
+2. Use the **try...finally** construct to ensure the avoidance of deadlocks;
+
+#### **Class Semaphore**
+
+The `Semaphore` class is another synchronization primitive that allows you to control access to a specified number of resources by multiple threads.
+It's useful when you want to limit the number of threads that can access a particular section of code concurrently. 
+
+Our recommendations for using the `Semaphore` class:
+
+1. Be careful when initializing Semaphore instances;
+    - Once created, you cannot change the maximum count of threads that will be used in the critical section;
+2. Use named semaphores for inter-process synchronization;
+3. Always call the **WaitOne()** and **ReleaseMutex()** methods in pairs;
+4. Use the **try...finally** construct to ensure the avoidance of deadlocks;
+
+#### **General recommendations**
+
+1. Keep Critical Sections Small;
+   - Minimize the amount of code within a critical section to reduce the likelihood of contention and improve overall system performance;
+2. Prefer High-Level Constructs;
+   - Whenever possible, use higher-level constructs like `lock` statements and `Semaphore` instead of lower-level primitives like `Monitor` or `Mutex`. This helps improve code readability and maintainability;
+3. Avoid Blocking Indefinitely;
+4. Avoid Global Locks;
+   - Minimize the use of global locks, as they can lead to contention and reduce parallelism. Instead, use fine-grained locking to allow multiple threads to work independently when possible;
